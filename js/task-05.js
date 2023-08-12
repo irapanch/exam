@@ -1,23 +1,54 @@
 
-// Напиши скрипт, який під час набору тексту в інпуті input#name-input (подія input), підставляє його поточне значення в span#name-output. Якщо інпут порожній, у спані повинен відображатися рядок "Anonymous".
+const countries = [{name: 'Tunisian Republic',population: 11818618,area:163610,borders: ['DZA','LBY']},
+{name: 'Virgin Islands',population: 30237,area:151,borders: []}
+,{name: 'Montenegro',population: 621718,area:13812,borders: ['ALB','BIH','HRV','UNK','SRB']}
+,{name: 'Federal Democratic Republic of Nepal',population: 29136808,area:147181,borders: ['DZA','CHN','IND']}
+,{name: 'Republic of Indonesia',population: 273523621,area:1904569,borders: ['TLS','MYS','PNG']}
+,{name: 'Republic of Rwanda',population: 12952209,area:26338,borders: ['BDI','COD','DZA','UGA']}]
 
-// <input type="text" id="name-input" placeholder="Please enter your name" />
-// <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+// Первернути масив назв країн у яких є сусід 'DZA'
 
+const countryArr =  countries.filter(country => country.borders.includes('DZA') ).map(country => country.name)
 
-const nameIn = document.querySelector('#name-input');  //дісталися до input з id="name-input"
-const nameOut = document.querySelector('#name-output'); //дісталися до input з id="name-output"
-
-nameIn.addEventListener('input', function () { //введення даних в інпут викликає функцію
-    nameIn.value !== '' // якщо введене значення не пустий рядок
-    ? (nameOut.textContent = nameIn.value) // оновлюємо текстовий вміст елемента name-output
-    : (nameOut.textContent = 'Anonymous'); // інакше - встановлюємо значення "Anonymous"
-});
+console.log(countryArr);
 
 
 
-// =======================================================
 
-// nameIn.addEventListener('input', function() { //введення даних в інпут викликає функцію
-//     nameOut.textContent = nameIn.value || 'Anonymous'; // оновлюємо текстовий вміст елемента name-output з введеного значення name-input або встановлюємо значення "Anonymous", якщо поле вводу порожнє
-//   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
