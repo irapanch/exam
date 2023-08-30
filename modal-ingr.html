@@ -5,24 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SimpleLightbox library</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css"
-      integrity="sha512-bhYgu+LnK6ZXsq18JjhqqzZjnw4GzgCe6s34JBw09tQZ9oFC5tdSlLJW/7ZCf9EXuepe6tnQW57X8z3DKnsAGg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-      
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/styles.css" />
 
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="/css/modal-ingr.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-  <p><a href="index.html">Go back</a></p>
-  <div class="first"></div>
+    <p><a href="index.html">Go back</a></p>
 
-  <!-- ============== -->
-  
-<div class="container modal2 backdrop__ingr is-hidden"></div>
-  <!-- ================= -->
+    <!-- ============== -->
+
+    <div class="is-hidden backdrop" data-modal-cocktail>
+      <div class="modal-cocktail theme-dark">
+        <div class="modal-cocktail-wrapper ">
+          <button type="button" class="modal-cocktail-close-btn" data-modal-close>
+            <svg class="icon-modal-cocktail" height="22" width="22">
+              <use href="#"></use>
+            </svg>x
+          </button>
+          <img
+            class="modal-cocktail-img"
+            src="/img/ACID.png"
+            alt="coctail`s name"
+            width="295"
+            height="277"
+          />
+          
+          <div class="cocktail-desc">
+            <h3 class="cocktail-desc-name">INGREDIENTS:</h3>
+
+            <p class="cocktail-desc-subtitle">Per cocktail</p>
+
+            <ul class="cocktail-desc-list">
+              <li class="ingredients-modal-item">Ice</li>
+              <li class="ingredients-modal-item">1 ounce gin</li>
+              <li class="ingredients-modal-item">1 ounce Campari</li>
+              <li class="ingredients-modal-item">1 ounce sweet vermouth</li>
+              <li class="ingredients-modal-item">Garnish: orange peel</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cocktail-instruction">
+          <h3 class="instruction-name">INSTRACTIONS:</h3>
+          <p class="instruction-text">
+            Add the gin, Campari and sweet vermouth to a mixing glass filled
+            with ice, and stir until well-chilled. Strain into a rocks glass
+            filled with large ice cubes. Garnish with an orange peel.
+          </p>
+        </div>
+        <button id="idDrink" type="button" class="cocktails-modal-btn">
+          add to favorite
+        </button>
+      </div>
+      <div class="is-hidden modal-ingredient js-modal-ingredient"></div>
+    </div>
+    <!-- ================= -->
     <script src="js/modal-ingr.js" type="module"></script>
   </body>
 </html>
-
-
